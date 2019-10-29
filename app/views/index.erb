@@ -1,5 +1,4 @@
-<!--
-<!DOCUTYPE html>
+
 <html>
   <head>
     <title></title>
@@ -7,17 +6,19 @@
 
   <body>
     <h1>Welcome to Recipe Digitizer</h1>
-    <table backgroundcolor="green">
+    <%# <table backgroundcolor="green">
       <th><a href="/recipes/new">Enter New Recipe</a></th>
-      <th><a href="/recipes/:id/edit">Change Recipes</a></th>
-    </table>
--->    
+      <th><a href="/recipes//edit">Change Recipes</a></th>
+    </table> %>
+    
 
     <ul>
+
       <% @recipes.each do |recipe|%>
+
         <li>
           Recipe <%= recipe.id %>: 
-          <a href="/recipes/<%= recipe.id %>"><b> <%= recipe.name.capitalize %></b></a>
+          <a href="/recipes/<%= recipe.id %>"><b><%= recipe.name %></b></a>
           Cook Time: <%= recipe.cook_time %> <br>
           Ingredients: <%= recipe.ingredients %>
         </li>
