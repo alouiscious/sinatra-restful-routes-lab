@@ -1,0 +1,29 @@
+<!DOCUTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+
+  <body>
+    <h1>Complete the recipe form below</h1>
+      <form action="/recipes" method="POST">
+        <table backgroundcolor="green">
+          <th>
+          <label for="name">Name</label>
+          <tr><input id="name" type="text" name="name" placeholder="Enter Recipe Name"></tr>
+          </th>
+
+          <th>
+          <label for="ingredients">Ingredients</label>
+          <tr><input id="ingredients" type="text" name="ingredients" placeholder="Enter Ingredients"></tr>
+          </th>
+
+          <th>
+          <label for="cook_time">Cook Time</label>
+          <tr><input id="cook_time" type="text" name="cook_time" placeholder="Enter Cook Time"></tr>    
+          </th>
+        </table>
+        <input id="new_entry" type="submit" value="Log Recipe">
+      </form>
+  </body>
+</html>
