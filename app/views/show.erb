@@ -4,7 +4,15 @@
 <!-- <h3>Recipe No. <%= @recipe.id %> - <%= @recipe.name %></h3> %>-->
 <h3>Cook Time: <%= @recipe.cook_time %> minutes</h3>
 <h3>Ingredients: <%= @recipe.ingredients %></h3> 
-<table backgroundcolor="green">
+
+
+
+<!-- <table backgroundcolor="green">
   <th><a href="/recipes/new">Enter New Recipe</a></th>
   <th><a href="/recipes">View All Recipes</a></th>
-</table>
+</table> -->
+
+<form action="/recipes/<%=@recipe.id%>" method="POST">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input id="hidden" type="submit" value="delete">
+</form>

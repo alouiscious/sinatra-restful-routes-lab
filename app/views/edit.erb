@@ -1,10 +1,4 @@
-<!DOCUTYPE html>
-<html>
-  <head>
-    <title></title>
-  </head>
 
-  <body>
     <h1>Edit Your Digital Recipe</h1>
     <form action="/recipes/<%= @recipe.id %>" method="POST">
       <input id="hidden" type="hidden" name="_method" value="PATCH">
@@ -25,7 +19,7 @@
       <input id="edit" type="submit" value="Edit Recipe">
     </form>
 
-    <table background="green">
+<!--    <table background="green">
       <th><a href="/recipes/new">Enter New Recipe</a></th>
       <th><a href="/recipes">View All Recipes</a></th>
     </table>
@@ -39,5 +33,4 @@
         </li>
       <%end%>
     </ul>
-  </body>
-</html>
+    -->
