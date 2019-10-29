@@ -7,8 +7,18 @@
   <body>
     <h1>Welcome to Recipe Digitizer</h1>
     <table backgroundcolor="green">
-      <th><a href="/recipes/new">Enter New</a></th>
-      <th><a href="/recipes">View All</a></th>
+      <th><a href="/recipes/new">Enter New Recipe</a></th>
+      <th><a href="/recipes">View All Recipes</a></th>
     </table>
+
+    <ul>
+      <% @recipes.each do |recipe|%>
+        <li>
+          <a href="/recipes/<%= recipe.id %>">Name: <%= recipe.name %></a>
+          Cook Time: <%= recipe.cook_time %>
+          Ingredients: <%= recipe.ingredients %>
+        </li>
+      <%end%>
+    </ul>
   </body>
 </html>

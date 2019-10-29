@@ -1,0 +1,43 @@
+<!DOCUTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+
+  <body>
+    <h1>Edit Your Digital Recipe</h1>
+    <form action="/recipes/<%= @recipe.id %>" method="POST">
+      <input id="hidden" type="hidden" name="_method" value="PATCH">
+        <table>
+          <th>
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" value="<%= @recipe.name %>">
+          </th>
+          <th>
+            <label for="ingredients">Ingredients</label>
+            <input id="ingredients" type="text" name="ingredients" value="<%= @recipe.ingredients %>">
+          </th>
+          <th>
+            <label for="cook_time" alignleft="true">Cook Time</label>
+            <input id="cook_time" type="text" name="cook_time" value="<%= @recipe.cook_time %>">
+          </th>
+        </table>  
+      <input id="edit" type="submit" value="Edit Recipe">
+    </form>
+
+    <table background="green">
+      <th><a href="/recipes/new">Enter New Recipe</a></th>
+      <th><a href="/recipes">View All Recipes</a></th>
+    </table>
+
+    <ul>
+      <% @recipes.each do |recipe|%>
+        <li>
+          <a href="/recipes/<%= recipe.id %>">Name: <%= recipe.name %></a>
+          Cook Time: <%= recipe.cook_time %>
+          Ingredients: <%= recipe.ingredients %>
+        </li>
+      <%end%>
+    </ul>
+  </body>
+</html>
